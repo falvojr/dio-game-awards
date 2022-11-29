@@ -1,0 +1,10 @@
+INSERT INTO games (id, name, description, cover, votes) VALUES (1, 'A Plague Tale: Requiem', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (2, 'Elden Ring', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (3, 'God of War: Ragnarok', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (4, 'Horizon: Forbidden West', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (5, 'Stray', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (6, 'Xenoblade Chronicles 3', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (7, 'Immortality', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (8, 'Call of Duty: Modern Warfare 2', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (9, 'Pokémon Legends: Arceus', 'TODO', 'TODO', 0);
+INSERT INTO games (id, name, description, cover, votes) VALUES (10, 'Gran Turismo 7', 'TODO', 'TODO', 0);
