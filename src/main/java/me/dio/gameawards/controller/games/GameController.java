@@ -1,5 +1,7 @@
 package me.dio.gameawards.controller.games;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -20,18 +22,18 @@ public class GameController extends BaseRestController {
 	private GameService camadaDeNegocio;
 	
 	@GetMapping("games")
-	public ResponseEntity<Iterable<Game>> buscarTodos() {
-		return ResponseEntity.ok(camadaDeNegocio.buscarTodos());
+	public ResponseEntity<List<Game>> buscarTodos() {
+		return ResponseEntity.ok(camadaDeNegocio.findAll());
 	}
 	
 	@GetMapping("games/{id}")
 	public ResponseEntity<Game> buscarUm(@PathVariable Long id) {
-		return ResponseEntity.ok(camadaDeNegocio.buscarUm(id));
+		return ResponseEntity.ok(camadaDeNegocio.findById(id));
 	}
 
 	@PatchMapping("games/{id}/vote")
 	public ResponseEntity<Game> votar(@PathVariable Long id) {
-		camadaDeNegocio.votar(id);
+		camadaDeNegocio.vote(id);
 		return ResponseEntity.ok().build();
 	}
 

@@ -4,13 +4,13 @@ import java.util.List;
 
 public interface CrudService<T> {
 	
-	List<T> buscarTodos();
+	List<T> findAll();
 
-	T buscarUm(Long id);
+	T findById(Long id);
 
-	void inserir(T entidade);
+	void insert(T entidade);
 
-	void alterar(Long id, T entidade);
+	void update(Long id, T entidade);
 
-	void excluir(Long id);
+	void delete(Long id);
 }
