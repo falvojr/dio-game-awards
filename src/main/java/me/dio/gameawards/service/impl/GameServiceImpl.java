@@ -11,11 +11,8 @@ import me.dio.gameawards.service.GameService;
 public class GameServiceImpl extends BaseCrudService<Game> implements GameService {
 
 	@Autowired
-	private GameRepository gameRepository;
-	
-	@Override
-	protected GameRepository getRepository() {
-		return this.gameRepository;
+	public GameServiceImpl(GameRepository repository) {
+		super(repository);
 	}
 
 	@Override

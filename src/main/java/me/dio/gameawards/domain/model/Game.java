@@ -1,5 +1,6 @@
 package me.dio.gameawards.domain.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import me.dio.gameawards.domain.BaseEntity;
 
@@ -7,6 +8,7 @@ import me.dio.gameawards.domain.BaseEntity;
 public class Game extends BaseEntity {
 
 	private String name;
+	@Column(length = 500)
 	private String description;
 	private String cover;
 	private long votes;

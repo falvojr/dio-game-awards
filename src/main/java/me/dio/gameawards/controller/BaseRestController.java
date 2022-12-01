@@ -1,6 +1,5 @@
 package me.dio.gameawards.controller;
 
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,11 +22,11 @@ public abstract class BaseRestController {
 
 	@ExceptionHandler(Throwable.class)
 	private ResponseEntity<ErrorResponse> handlerErroInesperado(Throwable e) {
-		//TODO: Definir um mecanismo de log mais adequado, tendo em vista a observabilidade das nossas excecoes.
+		//TODO: Em produção definir um mecanismo de log mais adequado, tendo em vista a observabilidade da nossa solução.
 		e.printStackTrace();
 		
 		ErrorResponse error = new ErrorResponse("Ops, ocorreu um erro inesperado.");
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
+		return ResponseEntity.internalServerError().body(error);
 	}
 
 }
