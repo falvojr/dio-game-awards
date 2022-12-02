@@ -22,17 +22,17 @@ public class GameController extends BaseRestController {
 	private GameService camadaDeNegocio;
 	
 	@GetMapping("games")
-	public ResponseEntity<List<Game>> buscarTodos() {
+	public ResponseEntity<List<Game>> findAll() {
 		return ResponseEntity.ok(camadaDeNegocio.findAll());
 	}
 	
 	@GetMapping("games/{id}")
-	public ResponseEntity<Game> buscarUm(@PathVariable Long id) {
+	public ResponseEntity<Game> findById(@PathVariable Long id) {
 		return ResponseEntity.ok(camadaDeNegocio.findById(id));
 	}
 
 	@PatchMapping("games/{id}/vote")
-	public ResponseEntity<Game> votar(@PathVariable Long id) {
+	public ResponseEntity<Game> vote(@PathVariable Long id) {
 		camadaDeNegocio.vote(id);
 		return ResponseEntity.ok().build();
 	}
