@@ -19,21 +19,21 @@ import me.dio.gameawards.service.GameService;
 public class GameController extends BaseRestController {
 	
 	@Autowired
-	private GameService camadaDeNegocio;
+	private GameService businessLayer;
 	
 	@GetMapping("games")
 	public ResponseEntity<List<Game>> findAll() {
-		return ResponseEntity.ok(camadaDeNegocio.findAll());
+		return ResponseEntity.ok(this.businessLayer.findAll());
 	}
 	
 	@GetMapping("games/{id}")
 	public ResponseEntity<Game> findById(@PathVariable Long id) {
-		return ResponseEntity.ok(camadaDeNegocio.findById(id));
+		return ResponseEntity.ok(this.businessLayer.findById(id));
 	}
 
 	@PatchMapping("games/{id}/vote")
 	public ResponseEntity<Game> vote(@PathVariable Long id) {
-		camadaDeNegocio.vote(id);
+		this.businessLayer.vote(id);
 		return ResponseEntity.ok().build();
 	}
 

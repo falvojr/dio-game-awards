@@ -10,13 +10,13 @@ import me.dio.gameawards.service.exception.BusinessException;
 import me.dio.gameawards.service.exception.NoContentException;
 
 public abstract class BaseCrudService<E extends BaseEntity, T extends JpaRepository<E, Long>> implements CrudService<E> {
-	
+
 	protected T repository;
 
-    public BaseCrudService(T repository) {
-        this.repository = repository;
-    }
-	
+	public BaseCrudService(T repository) {
+		this.repository = repository;
+	}
+
 	@Override
 	public void insert(E entidade) {
 		this.repository.save(entidade);

@@ -2,15 +2,15 @@ package me.dio.gameawards.service;
 
 import java.util.List;
 
-public interface CrudService<T> {
+public interface CrudService<E> {
 	
-	List<T> findAll();
+	List<E> findAll();
 
-	T findById(Long id);
+	E findById(Long id);
 
-	void insert(T entidade);
+	void insert(E entity);
 
-	void update(Long id, T entidade);
+	void update(Long id, E entity);
 
 	void delete(Long id);
 }
