@@ -16,16 +16,16 @@ public abstract class BaseRestController {
 	}
 	
 	@ExceptionHandler(BusinessException.class)
-	private ResponseEntity<ErrorResponse> handlerBusinessException(BusinessException e) {
-		return ResponseEntity.badRequest().body(new ErrorResponse(e.getMessage()));
+	private ResponseEntity<ApiErrorDTO> handlerBusinessException(BusinessException e) {
+		return ResponseEntity.badRequest().body(new ApiErrorDTO(e.getMessage()));
 	}
 
 	@ExceptionHandler(Throwable.class)
-	private ResponseEntity<ErrorResponse> handlerUnexpectedException(Throwable e) {
+	private ResponseEntity<ApiErrorDTO> handlerUnexpectedException(Throwable e) {
 		//TODO: Em produção definir um mecanismo de log mais adequado, tendo em vista a observabilidade da nossa solução.
 		e.printStackTrace();
 		
-		return ResponseEntity.internalServerError().body(new ErrorResponse("Ops, ocorreu um erro inesperado."));
+		return ResponseEntity.internalServerError().body(new ApiErrorDTO("Ops, ocorreu um erro inesperado."));
 	}
 
 }
