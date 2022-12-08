@@ -1,4 +1,4 @@
-# Template Usando Spring Boot Para Criação de APIs REST
+#  DIO Game Awards: API RESTful Com Java 17 e Spring Boot 3
 
 Projeto base (template) usando Java 17 e Spring Boot 3 com Spring Data para criação de APIs RESTful usando JPA (H2 configurado por padrão). Este projeto foi desenvolvido e consumido durante o evento **DIO Fullstack Labs**, conforme as seguintes lives:
 
