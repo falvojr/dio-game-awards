@@ -6,4 +6,4 @@ Projeto base (template) usando Java 17 e Spring Boot 3 com Spring Data para cria
     1. [Vídeo Complementar: Correção na Violação de PK na Nossa API Java](https://youtu.be/Rxu9zmowTe8)
 
 2. [DIO Fullstack Labs - Dia 2 (App React Native)](https://web.dio.me/lives/dio-fullstack-labs-dia-2)
-    
+    - https://github.com/felipeAguiarCode/react-native-game-awards-vote
